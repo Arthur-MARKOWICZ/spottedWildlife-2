@@ -20,8 +20,6 @@
   <script>
     new window.VLibras.Widget('https://vlibras.gov.br/app');
   </script>
-<div class= "x">
-      
     <div class= "conteiner">
       
       
@@ -37,6 +35,9 @@
         <button><a href="logout.php">Sair</a></button>
       </nav>
     </div>
+<div class= "x">
+      
+
     <form action="cadastranimal2.php" method="POST">
         Nome Usual: <input type="text" name="txtNomeUsual" id="txtNomeUsual" placeholder="Insira o nome usual do animal"/><br/>
         Alimentação: <input type="text" name="txtAli" id="txtAli" placeholder="Insira a alimentação do animal"/><br/>
