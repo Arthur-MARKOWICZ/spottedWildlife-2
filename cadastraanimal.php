@@ -22,13 +22,13 @@
   </script>
 <div class= "x">
       
-<div class= "conteiner">
+    <div class= "conteiner">
       
       
       <nav class= "navbar">
         <a href="index.php">Home</a></br>
         <a href="protectfeed.php">Feed</a></br>
-        <a href="postagem.php">Postar</a></br>
+        <a href="postagem.php">Postar</a></br>  
         <a href="cadastraanimal.php">Cadastrar animal</a></br>
         <a href="doacao.html">Doação</a></br>
         <a href="dados.php">Dados do cadastro</a></br>
@@ -60,6 +60,6 @@
           <option value="Não Venenoso">Não venenoso</option></select>
           <input type="submit" value="Enviar"/>
     </form>
-    </div>
+</div>
 </body>
 </html>

@@ -4,7 +4,7 @@
     $nomeUsual = $_POST['txtNomeUsual'];
     $alimentacao = $_POST['txtAli'];
     $riscoExtincao = $_POST['txtExt'];
-    $migratório = $_POST['txtMigr'];
+    $migratorio = $_POST['migratorio'];
     $ritimoCircadiano  = $_POST['RitmoCircadiano'];
     $nivelPerigo  = $_POST['txtNvlPerigo'];
     $periodoReprodutivo = $_POST['txtPerRep'];
@@ -13,14 +13,14 @@
     $classe = $_POST['txtClasse'];
     $ordem = $_POST['txtOrdem'];
     $usuarios_id = $_SESSION['id'];
-   
+    $_SESSION['nomeusual'] = $nomeUsual;
     $stmt = $conn->prepare("CALL animal_ja_cadastrado(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
     $stmt->bind_param(
         "ssssissssssi", 
         $nomeUsual, 
         $alimentacao, 
         $riscoExtincao, 
-        $migratório, 
+        $migratorio, 
         $nivelPerigo, 
         $periodoReprodutivo, 
         $veneno, 
@@ -30,7 +30,8 @@
         $ritimoCircadiano, 
         $usuarios_id
     );
-    $stmt->execute();    
-    header('location: dadosanimal.php')
+    $stmt->execute();   
+
+    header('location: cadastraanimal3.php')
 
 ?>

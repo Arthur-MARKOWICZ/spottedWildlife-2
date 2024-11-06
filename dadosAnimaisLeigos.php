@@ -46,7 +46,7 @@
                 <th scope="col">nome usual</th>
                 <th scope="col">alimentacao</th>
                 <th scope="col">risco de extincao</th>
-                <th scope="col">migratório</th>
+                <th scope="col">migratorio</th>
                 <th scope="col">nivel de perigo</th>
                 <th scope="col">periodo de reprodutivo</th>
                 <th scope="col">veneno</th>
@@ -63,7 +63,7 @@
                 echo "<td>".$animal_dados['nome_usual']."</td>";
                 echo "<td>".$animal_dados['alimentacao']."</td>";
                 echo "<td>".$animal_dados['risco_extincao']."</td>";
-                echo "<td>".$animal_dados['migratório']."</td>";
+                echo "<td>".$animal_dados['migratorio']."</td>";
                 echo "<td>".$animal_dados['perigo']."</td>";
                 echo "<td>".$animal_dados['periodo_reprodutivo']."</td>";
                 echo "<td>".$animal_dados['veneno']."</td>";

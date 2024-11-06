@@ -9,7 +9,7 @@
             $nome = $animaldados['nome_usual'];
             $alimentacao = $animaldados['alimentacao'];
             $riscoExtincao = $animaldados['risco_extincao'];
-            $migratório = $animaldados['migratório'];
+            $migratorio = $animaldados['migratorio'];
             $perigo = $animaldados['perigo'];
             $periodoReprodutivo = $animaldados['periodo_reprodutivo'];
             $veneno = $animaldados['veneno'];
@@ -47,8 +47,8 @@
             Risco de extinção: <input type="text" name="txtExt" id="txtExt"value="<?php echo $riscoExtincao ?>" placeholder="Insira nivel de extinção"/><br/>
             <select id="Migratório" name="Migratório" required>
             <option value="0" disabled selected>Selecione se o animal é migratório ou não:</option>
-            <option value="Migratório"<?php echo ($migratório == "Migratório") ? 'selected' : ''; ?>>Migratório</option>
-            <option value="Não Migratório"<?php echo ($migratório == "Não migratório") ? 'selected' : ''; ?>>Não migratório</option>
+            <option value="Migratório"<?php echo ($migratorio == "Migratório") ? 'selected' : ''; ?>>Migratório</option>
+            <option value="Não Migratório"<?php echo ($migratorio == "Não migratório") ? 'selected' : ''; ?>>Não migratório</option>
             Filo: <input type="text" name="txtFilo" id="txtFilo" value="<?php echo $filo ?>"placeholder="Insira o filo do animal"><br/>
             Classe: <input type="text" name="txtClasse" id="txtClasse" value="<?php echo $classe ?> "placeholder="Insira a classe do animal"><br/>
             Ordem: <input type="text" name="txtOrdem" id ="txtOrdem" value="<?php echo $ordem ?>"placeholder="Insira a ordem do animal"><br/>
