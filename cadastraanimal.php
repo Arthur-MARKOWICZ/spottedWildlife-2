@@ -55,7 +55,7 @@
         Nivel de perigo: <input type="text" name="txtNvlPerigo" id="txtNvlPerigo" placeholder="Insira o nível de perigo do animal"/><br/>
         Periodo Reprodutivo: <input type="text" name="txtPerRep" id="txtPerRep" placeholder="Insira o período reprodutivo do animal" ><br/>
           <select id="Veneno" name="Veneno" required>
-          <option value="0" disabled selected>Selecione se o animal é venenoso:</option>
+          <option value="0" disabled selected>Selecione se o animal é venenoso ou não:</option>
           <option value="Venenoso">Venenoso</option>
           <option value="Não Venenoso">Não venenoso</option></select>
           <input type="submit" value="Enviar"/>
