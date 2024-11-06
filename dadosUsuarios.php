@@ -1,0 +1,85 @@
+<?php
+
+    include('conn.php');
+    include('protect.php');
+    include('protectadmin.php');
+    $listardados = $conn->query("SELECT * FROM usuarios");
+   
+    
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dados.css" />
+    <title>Atualizando dados do cadastro</title>
+</head>
+<body>
+    <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>  
+<div class= "conteiner">
+      
+      <nav class= "navbar">
+        <a href="index.php">Home</a></br>
+        <a href="protectfeed.php">Feed</a></br>
+        <a href="postagem.php">Postar</a></br>
+        <a href="cadastraanimal.php">Cadastrar animal</a></br>
+        <a href="doacao.html">Doação</a></br>
+        <a href="dados.php">Dados do cadastro</a></br>
+        <a href="protectdadosanimais.php">Dados dos animais</a></br>
+        <a href="cadastroespecialista.php">Cadastro dos especialistas</a></br>
+        <button><a href="logout.php">Sair</a></button>
+      </nav>
+    </div>
+    <table class='table'>
+        <thead> 
+            <tr>
+                <th scope="col">cpf</th>
+                <th scope="col">nome</th>
+                <th scope="col">sexo</th>
+                <th scope="col">animal favorito</th>
+                <th scope="col">data de nascimento</th>
+                <th scope="col">senha</th>
+                <th scope="col">nick</th>
+                <th scope="col">pais</th>
+                <th scope="col">estado</th>
+                <th scope="col">cidade</th>
+                <th scope="col">telefone</th>
+                <th scope="col">email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php 
+                while($usuario_dados = mysqli_fetch_assoc($listardados)){
+                    echo "<tr>";
+                    echo "<td>".$usuario_dados['cpf']."</td>";
+                    echo "<td>".$usuario_dados['nome']."</td>";
+                    echo "<td>".$usuario_dados['sexo']."</td>";
+                    echo "<td>".$usuario_dados['animal_fav']."</td>";
+                    echo "<td>".$usuario_dados['data_nasc']."</td>";
+                    echo "<td>".$usuario_dados['senha_user']."</td>";
+                    echo "<td>".$usuario_dados['nome_user']."</td>";
+                    echo "<td>".$usuario_dados['end_pais']."</td>";
+                    echo "<td>".$usuario_dados['end_estado']."</td>";
+                    echo "<td>".$usuario_dados['end_cidade']."</td>";
+                    echo "<td>".$usuario_dados['telefone']."</td>";
+                    echo "<td>".$usuario_dados['email_pessoal']."</td>";
+                    echo "<td><a class='botao' href='deletarUsuarios.php?idU=$usuario_dados[usuarios_id]'>deletar</a></td>";
+                    echo "</tr>";
+                }
+            ?>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

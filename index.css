@@ -1,0 +1,90 @@
+/* 
+ css da pagina index.php
+*/
+body {
+  background-color: rgb(255, 255, 255);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  color: rgb(12, 66, 7);
+  font-size: 30px;
+  text-align: center;
+}
+
+header {
+  background-color: rgb(31, 158, 69);
+  height: 80px;
+}
+
+select {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: rgb(18, 207, 43);
+  color: white;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: rgb(13, 190, 7);
+}
+
+button:focus {
+  outline: 2px solid orange;
+}
+footer {
+  background-color: rgb(31, 158, 69);
+  height: 80px;
+  text-align: center;
+  justify-content: center;
+  margin: 0;
+  color: white;
+}
+.conteiner {
+  display: flex;
+}
+.navbar {
+  display: flex;
+  flex-direction: row;
+  background-color: limegreen;
+  width: 100%;
+  justify-content: space-between;
+}
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+  background-color: #575757;
+}
+
+.navbar button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin-top: 0px;
+  transition: background-color 0.3s;
+}
+
+.navbar button:hover {
+  background-color: #ff1a1a;
+}
