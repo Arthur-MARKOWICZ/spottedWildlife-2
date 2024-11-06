@@ -48,7 +48,7 @@
             <select id="Migratório" name="Migratório" required>
             <option value="0" disabled selected>Selecione se o animal é migratório ou não:</option>
             <option value="Migratório"<?php echo ($migratorio == "Migratório") ? 'selected' : ''; ?>>Migratório</option>
-            <option value="Não Migratório"<?php echo ($migratorio == "Não migratório") ? 'selected' : ''; ?>>Não migratório</option>
+            <option value="Não Migratório"<?php echo ($migratorio == "Não Migratório") ? 'selected' : ''; ?>>Não migratório</option>
             Filo: <input type="text" name="txtFilo" id="txtFilo" value="<?php echo $filo ?>"placeholder="Insira o filo do animal"><br/>
             Classe: <input type="text" name="txtClasse" id="txtClasse" value="<?php echo $classe ?> "placeholder="Insira a classe do animal"><br/>
             Ordem: <input type="text" name="txtOrdem" id ="txtOrdem" value="<?php echo $ordem ?>"placeholder="Insira a ordem do animal"><br/>
@@ -60,7 +60,7 @@
             Periodo Reprodutivo: <input type="text" name="txtPerRep" id="txtPerRep" value="<?php echo $periodoReprodutivo ?> "placeholder="Insira  périodo reprodutivo do animal" ><br/>
             <select id="Veneno" name="Veneno" required>
             <option value="0" disabled selected>Selecione se o animal é venenoso ou não:</option>
-            <option value="venenoso" <?php echo ($veneno == "Venenoso") ? 'selected' : ''; ?>>Venenoso</option>
+            <option value="Venenoso" <?php echo ($veneno == "Venenoso") ? 'selected' : ''; ?>>Venenoso</option>
             <option value="Não venenoso" <?php echo ($veneno == "Não venenoso") ? 'selected' : ''; ?>>Não venenoso</option>
             </select>
             <button class="botao" type="submit" name="animal_id" value="<?= $animal_id ?>">Enviar</button>

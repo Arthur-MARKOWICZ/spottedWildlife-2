@@ -5,7 +5,7 @@
     $nomeUsual = $_POST['txtNomeUsual'];
     $alimentacao = $_POST['txtAli'];
     $riscoExtincao = $_POST['txtExt'];
-    $migratorio = $_POST['txtMigr'];
+    $migratorio = $_POST['Migratório'];
     $nivelPerigo  = $_POST['txtNvlPerigo'];
     $periodoReprodutivo = $_POST['txtPerRep'];
     $veneno = $_POST['Veneno'];
