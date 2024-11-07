@@ -23,6 +23,7 @@ if(isset($_POST['email'])||isset($_POST['senha'])){
             if(!isset($_SESSION)){
                 session_start();
             }
+            $_SESSION['senha'] =  $senhaentrada;
             $_SESSION['id'] = $result['usuarios_id'];
             $_SESSION['name'] = $result['nome_user'];
             header("location: index.php");

@@ -67,7 +67,7 @@
                     echo "<td>".$usuario_dados['sexo']."</td>";
                     echo "<td>".$usuario_dados['animal_fav']."</td>";
                     echo "<td>".$usuario_dados['data_nasc']."</td>";
-                    echo "<td>".$usuario_dados['senha_user']."</td>";
+                    echo "<td>".$_SESSION['senha']."</td>";
                     echo "<td>".$usuario_dados['nome_user']."</td>";
                     echo "<td>".$usuario_dados['end_pais']."</td>";
                     echo "<td>".$usuario_dados['end_estado']."</td>";
