@@ -62,7 +62,7 @@ if(isset($_POST['email'])||isset($_POST['senha'])){
             <p>
                 <button type="submite">Entrar</button>
             </p>
-            <button><a href="cadastro.html" class="botao">cadastrar-se</a></button>
+            <button><a href="cadastro.html" class="botao">Cadastrar-se</a></button>
         </form>
 </div>
 </body>
