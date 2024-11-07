@@ -56,7 +56,7 @@
             const arquivoInput = document.getElementById('imagem');
             const arquivo = arquivoInput.files[0];
             if (arquivo) {
-                const tamanhoMaximo = 16777216; // 16 MB em bytes
+                const tamanhoMaximo = 16777216;
                 if (arquivo.size > tamanhoMaximo) {
                     alert('Arquivo muito grande! O tamanho máximo é de 16 MB.');
                     arquivoInput.value = ''; 

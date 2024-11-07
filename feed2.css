@@ -1,0 +1,104 @@
+.conteiner {
+  display: flex;
+}
+.navbar {
+  display: flex;
+  flex-direction: row;
+  background-color: limegreen;
+  width: 100%;
+  justify-content: space-between;
+}
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+  background-color: #575757;
+}
+
+.navbar button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin-top: 0px;
+  transition: background-color 0.3s;
+}
+
+.navbar button:hover {
+  background-color: #ff1a1a;
+}
+
+.feed-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 900px;
+  margin-top: 30px;
+  padding-bottom: 50px;
+}
+
+.feed {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: lumn;
+  border: 2px scenterddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feed:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.feed h2 {
+  color: rgb(12, 66, 7);
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.feed img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 15px;
+  object-fit: cover;
+}
+
+.feed h4 {
+  font-size: 16px;
+  color: #555;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+.feed .data {
+  font-style: italic;
+  color: #888;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.feed .usuario {
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+}
+
+.feed .verificada {
+  font-size: 14px;
+  color: #28a745;
+  font-weight: bold;
+  margin-top: 10px;
+}

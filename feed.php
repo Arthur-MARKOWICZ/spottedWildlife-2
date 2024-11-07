@@ -7,7 +7,7 @@ include('protect.php');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="feed.css" />
+    <link rel="stylesheet" href="feed2.css" />
     <title>Document</title>
 </head>
 <body>
@@ -53,7 +53,7 @@ if ($result->num_rows > 0) {
         $animal = htmlspecialchars($postagem['nome_animal']);
         $comentario = htmlspecialchars($postagem['comentarios']);
         $data = htmlspecialchars($postagem['data_postagem']);
-
+        echo "<div class = 'feed'>";
         echo "<h2>$titulo</h2>";
         if($postagem['verificada'] != 0){
           echo "postagem verificada <br><br>";
@@ -64,6 +64,7 @@ if ($result->num_rows > 0) {
         echo "<h4>$cidade</h4>";
         echo "<h4>$data</h4>";
         echo "<h4>$nome</h4>";
+        echo"</div>"; 
     }
 } else {
     echo "<p>Nenhuma postagem encontrada.</p>";
