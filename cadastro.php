@@ -26,7 +26,13 @@
 
 
     $data_nasc = $_POST['txtNasc'];
-
+$sqlselect = "SELECT * from usuarios WHERE email_pessoal = '$email'";
+$resulte = $conn->query($sqlselect);
+$quantidade = $resulte->num_rows;
+if ($quantidade != 0){
+  echo "email ja cadastrado.";
+  echo "<a href = 'cadastro.html'>voltar para o cadastro</a>";
+}else{
   
 $cadastro_sql = "INSERT INTO usuarios (nome, cpf, animal_fav, senha_user, nome_user, end_pais, 
     end_cidade, telefone, email_pessoal, data_nasc, sexo, end_estado) 
@@ -51,36 +57,10 @@ $stmt = $conn->prepare($cadastro_sql);
     );
 
 
-  $stmt->execute()
+  $stmt->execute();
 
-
-
+    header("location: login.php");
+  }
   ?>
 
 
-<!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="cadastrophp.css" />
-    <title>Cadastro</title>
-  </head>
-  <body>
-    <header>
-      <img src="" alt="" />
-    </header>
-    <h1>Cadastro</h1>
-    Seu cadastro foi feito
-    <div vw class="enabled">
-    <div vw-access-button class="active"></div>
-    <div vw-plugin-wrapper>
-      <div class="vw-plugin-top-wrapper"></div>
-    </div>
-  </div>
-  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-  <script>
-    new window.VLibras.Widget('https://vlibras.gov.br/app');
-  </script>
-    <a href="login.php" class="botao">Login</a>
-  </html>
