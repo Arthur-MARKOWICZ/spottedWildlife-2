@@ -17,6 +17,7 @@
             $classe = $animaldados['classe'];
             $ordem = $animaldados['ordem'];
             $ritmoCircadiano = $animaldados['ritmo_circadiano'];
+            $avistado = $animaldados['num_avistado'];
         }
     }
 ?>
@@ -63,6 +64,7 @@
             <option value="Venenoso" <?php echo ($veneno == "Venenoso") ? 'selected' : ''; ?>>Venenoso</option>
             <option value="Não venenoso" <?php echo ($veneno == "Não venenoso") ? 'selected' : ''; ?>>Não venenoso</option>
             </select>
+            <input type="number" id="valor" name="avistado" value="<?php echo $avistado ?>"step="1" />
             <button class="botao" type="submit" name="animal_id" value="<?= $animal_id ?>">Enviar</button>
             </form>
     </div>

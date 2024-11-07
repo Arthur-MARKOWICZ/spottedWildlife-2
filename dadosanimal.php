@@ -72,6 +72,7 @@
                 <th scope="col">classe</th>
                 <th scope="col">ordem</th>
                 <th scope="col">ritmo circadiano</th>
+                <th scope="col">Numero de vezes aviastados</th>
             </tr>
             <thead>
     <tbody>
@@ -89,6 +90,7 @@
                 echo "<td>".$animal_dados['classe']."</td>";
                 echo "<td>".$animal_dados['ordem']."</td>";
                 echo "<td>".$animal_dados['ritmo_circadiano']."</td>";
+                echo "<td>".$animal_dados['num_avistado']."</td>";
                 
                 echo "<td>
                         <form action='editardadosanimal.php' method='post'>
