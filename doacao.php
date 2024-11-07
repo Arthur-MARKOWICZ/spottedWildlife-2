@@ -1,5 +1,4 @@
 <?php
-
 class Doacao {
     public $nome;
     public $valor;
@@ -29,6 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $doacao = new Doacao();
     $doacao->realizarDoacao($nome, $valor, $metodo);
+
 }
 ?>
 <!DOCTYPE html>
