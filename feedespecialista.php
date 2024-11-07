@@ -1,6 +1,23 @@
 <?php
 include('conn.php');
-include('protect.php');
+include('protectEspecialista.php');
+if(!empty($_GET['search']))
+{
+    $data = $_GET['search'];
+    $sqlP =  "SELECT *
+        FROM postagem p
+        JOIN usuarios u ON p.usuarios_id = u.usuarios_id
+         WHERE nome_animal LIKE '%$data%' ORDER BY p.postagem_id DESC";
+}
+else
+{
+    $sqlP = "SELECT *
+        FROM postagem p
+        JOIN usuarios u ON p.usuarios_id = u.usuarios_id
+        ORDER BY p.postagem_id DESC";
+
+}
+$resultP = $conn->query($sqlP)
 ?>
 
 <!DOCTYPE html>
@@ -8,7 +25,7 @@ include('protect.php');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="feed2.css" />
+    <link rel="stylesheet" href="feed3.css" />
     <title>Document</title>
 </head>
 <body>
@@ -35,18 +52,20 @@ include('protect.php');
         <a href="cadastroespecialista.php">Cadastro dos especialistas</a></br>
         <button><a href="logout.php">Sair</a></button>
       </nav>
-    </div>
+    </div><br><br>
+    <div class="box-search">
+        <input type="search" class="form-control w-25" placeholder="Pesquisar" id="pesquisar">
+        <button onclick="searchData()" class="btn btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+            </svg>
+        </button></div><br><br>
 
 <?php
-$sql = "SELECT *
-        FROM postagem p
-        JOIN usuarios u ON p.usuarios_id = u.usuarios_id
-        ORDER BY p.postagem_id DESC";
 
-$result = $conn->query($sql);
 
-if ($result->num_rows > 0) {
-    while ($postagem = $result->fetch_assoc()) {
+if ($resultP->num_rows > 0) {
+    while ($postagem = $resultP->fetch_assoc()) {
         $id = $postagem['postagem_id'];
         $nome = htmlspecialchars($postagem['nome_user']); 
         $titulo = htmlspecialchars($postagem['titulo']);
@@ -77,4 +96,19 @@ if ($result->num_rows > 0) {
 }
 ?>
 </body>
+<script>
+    var search = document.getElementById('pesquisar');
+
+    search.addEventListener("keydown", function(event) {
+        if (event.key === "Enter") 
+        {
+            searchData();
+        }
+    });
+
+    function searchData()
+    {
+        window.location = 'feedespecialista.php?search='+search.value;
+    }
+</script>
 </html>
