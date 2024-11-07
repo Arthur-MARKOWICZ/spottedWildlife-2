@@ -55,6 +55,7 @@
                 <th scope="col">cidade</th>
                 <th scope="col">telefone</th>
                 <th scope="col">email</th>
+                <th scope="col">ban</th>
             </tr>
         </thead>
         <tbody>
@@ -73,7 +74,9 @@
                     echo "<td>".$usuario_dados['end_cidade']."</td>";
                     echo "<td>".$usuario_dados['telefone']."</td>";
                     echo "<td>".$usuario_dados['email_pessoal']."</td>";
+                    echo "<td>".$usuario_dados['ban']."</td>";
                     echo "<td><a class='botao' href='deletarUsuarios.php?idU=$usuario_dados[usuarios_id]'>deletar</a></td>";
+                    echo "<td><a class='botao' href='banUsuario.php?idU=$usuario_dados[usuarios_id]'>ban</a></td>";
                     echo "</tr>";
                 }
             ?>

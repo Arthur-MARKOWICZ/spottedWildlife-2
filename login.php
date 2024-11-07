@@ -3,7 +3,7 @@ include("conn.php");
 if(isset($_POST['email'])||isset($_POST['senha'])){
     if(strlen($_POST['email'])==0){
         echo "preencha seu email"; 
-    }else if(strlen($_POST['senha'])==0){
+    }if(strlen($_POST['senha'])==0){
         echo "preencha sua senha";
     }else{
         $email =$conn->real_escape_string($_POST['email']);
@@ -11,18 +11,22 @@ if(isset($_POST['email'])||isset($_POST['senha'])){
         $sql_code = "SELECT * FROM usuarios WHERE email_pessoal='$email' AND senha_user='$senha' ";
         $sql_query = $conn->query($sql_code) or die("falha na execucao do codigo: ".$mysqli->error); 
         $quantidade = $sql_query->num_rows;
+        $result = $sql_query->fetch_assoc();
+        if($result['ban'] ==0){
         if($quantidade==1){
-            $usuario = $sql_query->fetch_assoc();
 
             if(!isset($_SESSION)){
                 session_start();
             }
-            $_SESSION['id'] = $usuario['usuarios_id'];
-            $_SESSION['name'] = $usuario['nome_user'];
+            $_SESSION['id'] = $result['usuarios_id'];
+            $_SESSION['name'] = $result['nome_user'];
             header("location: index.php");
         } else{
             echo "Falha ao logar! Email ou senha incorretos";
         }
+    }else{
+        echo "Voce foi banido do site.";
+    }
     }
 }
 ?>
