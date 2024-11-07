@@ -2,16 +2,21 @@ body {
   font-family: Arial, sans-serif;
   background-image: linear-gradient(45deg, cyan, limegreen);
   color: #333;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
   height: 100vh;
   margin: 0;
+}
+
+header {
+  background-color: rgb(12, 66, 7);
 }
 
 form {
   background-color: #fff;
   padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 400px;
@@ -61,4 +66,40 @@ button[type="submit"]:hover {
   color: #007bff;
   font-size: 1.1rem;
   text-align: center;
+}
+
+.conteiner {
+  display: flex;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  background-color: limegreen;
+  width: 100%;
+  justify-content: space-between;
+}
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+  background-color: #575757;
+}
+
+.navbar button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin-top: 0px;
+  transition: background-color 0.3s;
+}
+
+.navbar button:hover {
+  background-color: #ff1a1a;
 }
