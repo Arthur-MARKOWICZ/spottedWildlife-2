@@ -12,6 +12,8 @@ include('conn.php');
     $quantidadeE = $resultE->num_rows;
     if($quantidade !=1 or $quantidadeE != 1){
        header('location: feed.php');
+    }else if($quantidade == 1){
+        header('location: feedadmin.php');
     }else{
         header('location: feedespecialista.php');
     }
