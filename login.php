@@ -7,12 +7,17 @@ if(isset($_POST['email'])||isset($_POST['senha'])){
         echo "preencha sua senha";
     }else{
         $email =$conn->real_escape_string($_POST['email']);
-        $senha =$conn->real_escape_string($_POST['senha']);
-        $sql_code = "SELECT * FROM usuarios WHERE email_pessoal='$email' AND senha_user='$senha' ";
+        $senhaentrada =$conn->real_escape_string($_POST['senha']);
+        $sql = "SELECT senha_user FROM usuarios WHERE email_pessoal='$email'";
+        $resultS = $conn->query($sql);
+        $resultI = $resultS-> fetch_array();
+        $senhaarmazenada = $resultI['senha_user'];
+        $senha = password_verify($senhaentrada, $senhaarmazenada);
+        $sql_code = "SELECT * FROM usuarios WHERE email_pessoal='$email' AND senha_user='$senhaarmazenada' ";
         $sql_query = $conn->query($sql_code) or die("falha na execucao do codigo: ".$mysqli->error); 
         $quantidade = $sql_query->num_rows;
         $result = $sql_query->fetch_assoc();
-        if($result['ban'] ==0){
+        if($result['ban'] == 0){
         if($quantidade==1){
 
             if(!isset($_SESSION)){
@@ -24,7 +29,8 @@ if(isset($_POST['email'])||isset($_POST['senha'])){
         } else{
             echo "Falha ao logar! Email ou senha incorretos";
         }
-    }else{
+    }
+    else{
         echo "Voce foi banido do site.";
     }
     }

@@ -22,7 +22,9 @@
 
     $nomeUsuario = $_POST['txtNU'];
 
-    $senha = $_POST['txtSenha'];
+    $senhaantes = $_POST['txtSenha'];
+    
+    $senha = password_hash($senhaantes, PASSWORD_DEFAULT);
 
 
     $data_nasc = $_POST['txtNasc'];
