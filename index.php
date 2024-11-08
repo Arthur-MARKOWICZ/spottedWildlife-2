@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="index2.css" />
     <link rel="stylesheet" href="navbar.css" />
     
     <title>home</title>
@@ -45,10 +45,5 @@
         O projeto não tem intuito financeiro e é não-governamental, o dinheiro arrecadado será usado para manter o site 
         no ar e o sobressalente será doado para outras instituições. 
     </div>
-    <footer>
-      <br>
-      <p>OMC 2024 - Todos os direitos reservados</p>
-      
-    </footer>
 </body>
 </html>

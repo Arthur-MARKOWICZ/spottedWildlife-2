@@ -48,15 +48,12 @@ button:focus {
 }
 
 footer {
-  background-color: rgb(31, 158, 69);
-  height: 30px;
-  text-align: center;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: fixed;
   bottom: 0;
   width: 100%;
-  margin: 0;
+  background-color: rgb(31, 158, 69); /* Cor de fundo do rodapé */
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  z-index: 10;
 }

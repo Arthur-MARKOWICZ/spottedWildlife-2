@@ -74,11 +74,5 @@
         </tbody>
     </table>
 </div>
-<footer>
-      <br>
-      <p>OMC 2024 - Todos os direitos reservados</p>
-      
-    </footer>
-
 </body>
 </html>

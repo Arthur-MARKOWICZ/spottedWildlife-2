@@ -71,10 +71,5 @@
             <button class="botao" type="submit" name="animal_id" value="<?= $animal_id ?>">Enviar</button>
             </form>
     </div>
-    <footer>
-      <br>
-      <p>OMC 2024 - Todos os direitos reservados</p>
-      
-    </footer>
 </body>
 </html>
