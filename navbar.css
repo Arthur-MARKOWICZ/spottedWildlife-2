@@ -19,3 +19,16 @@
 .navbar a:hover {
   text-decoration: underline;
 }
+footer {
+  background-color: rgb(31, 158, 69);
+  height: 30px;
+  text-align: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+}

@@ -1,3 +1,67 @@
+body {
+  background-color: rgb(255, 255, 255);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: rgb(12, 66, 7);
+  font-size: 30px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.navbar {
+  background-color: rgb(31, 158, 69);
+  padding: 10px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 160px);
+}
+
+.form-container {
+  width: 100%;
+  max-width: 500px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.form-container input[type="text"] {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+button {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: rgb(18, 207, 43);
+  color: white;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+button:hover {
+  background-color: rgb(13, 190, 7);
+}
+
 footer {
   background-color: rgb(31, 158, 69);
   height: 80px;
