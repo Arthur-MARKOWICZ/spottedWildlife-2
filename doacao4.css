@@ -13,40 +13,6 @@ header {
   background-color: rgb(12, 66, 7);
 }
 
-.navbar {
-  display: flex;
-  flex-direction: row;
-  background-color: limegreen;
-  width: 100%;
-  justify-content: space-between;
-  padding: 10px 0; /* Ajuste o padding conforme necessário */
-}
-
-.navbar a {
-  color: white;
-  text-decoration: none;
-  padding: 10px 15px;
-  transition: background-color 0.3s;
-}
-
-.navbar a:hover {
-  background-color: #575757;
-}
-
-.navbar button {
-  background-color: #ff4d4d;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  margin-top: 0px;
-  transition: background-color 0.3s;
-}
-
-.navbar button:hover {
-  background-color: #ff1a1a;
-}
-
 .main-content {
   display: flex;
   justify-content: center;

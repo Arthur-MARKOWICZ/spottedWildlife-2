@@ -7,6 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="relatorio.css" />
+    <link rel="stylesheet" href="navbar.css"/>
     <title>Filtros para Geração de Relatório</title>
 </head>
 <body>

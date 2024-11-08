@@ -1,28 +1,18 @@
 .navbar {
-  display: flex;
-  flex-direction: row;
-  background-color: limegreen;
-  width: 100%;
-  justify-content: space-around;
+  background-color: rgb(31, 158, 69);
+  padding: 0px;
+  text-align: center;
+  color: white;
 }
+
 .navbar a {
   color: white;
   text-decoration: none;
-  padding: 10px 15px;
-  transition: background-color 0.3s;
+  padding: 0 6px;
+  margin: 3px;
+  font-size: 18px;
 }
+
 .navbar a:hover {
-  background-color: #575757;
-}
-.navbar button {
-  background-color: #ff4d4d;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  margin-top: 0px;
-  transition: background-color 0.3s;
-}
-.navbar button:hover {
-  background-color: #ff4d4d;
+  text-decoration: underline;
 }
