@@ -8,7 +8,7 @@ include('conn.php');
     $result = $conn->query($sql);
     $quantidade = $result->num_rows;
     if($quantidade !=1 ){
-        die("Você não pode acessar esta página: porque não esta logado.<p><a class= 'botao' href=\"login.php\">entrar </p>");
+        header('location: login.php');
     }
 ?>
 <!DOCTYPE html>

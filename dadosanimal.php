@@ -12,7 +12,7 @@
     {
         $sql = "SELECT * FROM animais ORDER BY animal_id DESC";
     }
-    $result = $conn->query($sql)
+    $listardados = $conn->query($sql);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,16 +35,8 @@
   </script>
 <div class= "conteiner">
       
-      <nav class= "navbar">
-        <a href="index.php">Home</a></br>
-        <a href="protectfeed.php">Feed</a></br>
-        <a href="postagem.php">Postar</a></br>
-        <a href="cadastraanimal.php">Cadastrar animal</a></br>
-        <a href="doacao.html">Doação</a></br>
-        <a href="dados.php">Dados do cadastro</a></br>
-        <a href="protectdadosanimais.php">Dados dos animais</a></br>
-        <a href="cadastroespecialista.php">Cadastro dos especialistas</a></br>
-        <button><a href="logout.php">Sair</a></button>
+<nav class= "navbar">
+      <?php include 'navbar.php'; ?>
       </nav>
     </div>
     <div class='titulo'>
@@ -61,23 +53,23 @@
     <table class='table'>
         <thead> 
             <tr>
-                <th scope="col">nome usual</th>
-                <th scope="col">alimentacao</th>
-                <th scope="col">risco de extincao</th>
-                <th scope="col">migratorio</th>
-                <th scope="col">nivel de perigo</th>
-                <th scope="col">periodo de reprodutivo</th>
-                <th scope="col">veneno</th>
-                <th scope="col">filo</th>
-                <th scope="col">classe</th>
-                <th scope="col">ordem</th>
-                <th scope="col">ritmo circadiano</th>
-                <th scope="col">Numero de vezes aviastados</th>
+                <th scope="col">Nome usual</th>
+                <th scope="col">Alimentacao</th>
+                <th scope="col">Risco de extincao</th>
+                <th scope="col">Migratorio</th>
+                <th scope="col">Nivel de perigo</th>
+                <th scope="col">Periodo de reprodutivo</th>
+                <th scope="col">Veneno</th>
+                <th scope="col">Filo</th>
+                <th scope="col">Classe</th>
+                <th scope="col">Ordem</th>
+                <th scope="col">Ritmo circadiano</th>
+                <th scope="col">Numero de vezes avistados</th>
             </tr>
-            <thead>
+</thead>
     <tbody>
-        <?php 
-            while($animal_dados = mysqli_fetch_assoc($result)){
+        <?php
+            while($animal_dados =  mysqli_fetch_assoc($listardados)){
                 echo "<tr>";
                 echo "<td>".$animal_dados['nome_usual']."</td>";
                 echo "<td>".$animal_dados['alimentacao']."</td>";

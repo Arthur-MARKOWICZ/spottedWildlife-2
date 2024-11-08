@@ -1,56 +1,89 @@
 <?php
-include('conn.php');
-include('protect.php');
-$data_inicial = $_POST['data_inicial'] ?? null;
-$data_final = $_POST['data_final'] ?? null;
-$categoria = $_POST['categoria'] ?? '';
-$status = $_POST['status'] ?? '';
-$ordenar_por = $_POST['ordenar_por'] ?? 'data';
-$agrupar_por = $_POST['agrupar_por'] ?? 'nenhum';
-$formato = $_POST['formato'] ?? 'pdf';
-
-$sql = "SELECT * FROM tabela_relatorio WHERE data BETWEEN :data_inicial AND :data_final";
-
-$params = [
-    ':data_inicial' => $data_inicial,
-    ':data_final' => $data_final
-];
-if (!empty($categoria)) {
-    $sql .= " AND categoria = :categoria";
-    $params[':categoria'] = $categoria;
-}
-if (!empty($status)) {
-    $sql .= " AND status = :status";
-    $params[':status'] = $status;
-}
-
-$sql .= " ORDER BY " . $ordenar_por;
-
-$stmt = $pdo->prepare($sql);
-$stmt->execute($params);
-
-$resultados = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-if ($formato == 'pdf') {
-    echo "<h2>Relatório em PDF</h2>";
-    foreach ($resultados as $linha) {
-        echo "Data: " . $linha['data'] . " - Categoria: " . $linha['categoria'] . " - Status: " . $linha['status'] . "<br>";
+    include('conn.php');
+    include('protect.php');
+    $filo = $_POST['txtfilo'];
+    $classe = $_POST['txtclasse'];
+    $ordem = $_POST['txtordem'];
+    if(!empty($filo)){
+    $sqlfilo = "SELECT * from animais WHERE filo like'%$filo%'";
+    $resultfilo = $conn->query($sqlfilo);
+    }else{
+        $resultfilo = false;
     }
-} elseif ($formato == 'excel') {
-    header('Content-Type: application/vnd.ms-excel');
-    header('Content-Disposition: attachment;filename="relatorio.xls"');
-    echo "Data\tCategoria\tStatus\n";
-    foreach ($resultados as $linha) {
-        echo $linha['data'] . "\t" . $linha['categoria'] . "\t" . $linha['status'] . "\n";
+    if(!empty($classe)){
+    $sqlclasse = "SELECT * from animais WHERE classe like '%$classe%'";
+    $resultclasse = $conn->query($sqlclasse);
+    }else{
+        $resultclasse = false;
     }
-} elseif ($formato == 'csv') {
-    header('Content-Type: text/csv');
-    header('Content-Disposition: attachment;filename="relatorio.csv"');
-    echo "Data,Categoria,Status\n";
-    foreach ($resultados as $linha) {
-        echo $linha['data'] . "," . $linha['categoria'] . "," . $linha['status'] . "\n";
+    if(!empty($ordem)){
+    $sqlordem = "SELECT * from animais WHERE ordem like '%$ordem%'";
+    $resultordem = $conn->query($sqlordem);
+    }else{
+        $resultordem = false;
     }
-} else {
-    echo "<p>Formato de relatório não suportado.</p>";
-}
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="relatorio2.css" />
+    <title>Relatório</title>
+</head>
+<body>
+<nav class= "navbar">
+      <?php include 'navbar.php'; ?>
+      </nav>
+<?php if ($resultfilo && $resultfilo->num_rows > 0): ?>      
+<div class="filo">
+        <h1>Filo: <?php echo htmlspecialchars($filo); ?></h1>
+            <ul>
+                <?php while ($row = $resultfilo->fetch_assoc()): ?>
+                    <li><?php echo htmlspecialchars($row['nome_usual']); ?></li>
+                <?php endwhile; ?>
+            </ul>
+        <?php else: ?>
+            <p>Nenhum resultado encontrado para o filo.</p>
+        <?php endif; ?>
+    </div>
+    <?php if ($resultclasse && $resultclasse->num_rows >0 ): ?>
+<div class="classe">
+        <h1>Classe: <?php echo htmlspecialchars($classe); ?></h1>
+            <ul>
+                <?php while ($rowC = $resultclasse->fetch_assoc()): ?>
+                    <li><?php echo htmlspecialchars($rowC['nome_usual']); ?></li>
+                <?php endwhile; ?>
+            </ul> 
+        <?php else: ?>
+    <p>Nenhum resultado encontrado para a classe.</p>
+        <?php endif; ?>
+    </div>
+    <?php if ($resultordem): ?>
+<div class="ordem">
+        <h1>Ordem: <?php echo htmlspecialchars($ordem); ?></h1>
+
+            <ul>
+                <?php while ($row = $resultordem->fetch_assoc()): ?>
+                    <li><?php echo htmlspecialchars($row['nome_usual']); ?></li>
+                <?php endwhile; ?>
+            </ul>
+        <?php else: ?>
+            <p>Nenhum resultado encontrado para a ordem.</p>
+        <?php endif; ?>
+    </div>
+</body>
+<script>
+    var search = document.getElementById('Pesquisar');
+    search.addEventListener("keydown", function(event) {
+        if (event.key === "Enter") 
+        {
+            searchData();
+        }
+    });
+    function searchData()
+    {
+        window.location = 'relatorio.php?search='+search.value;
+    }
+</script>
+</html>

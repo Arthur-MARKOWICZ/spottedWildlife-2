@@ -1,3 +1,6 @@
+<?php
+include('protect.php');
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
@@ -15,24 +18,17 @@
     </div>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
-      new window.VLibras.Widget('https://vlibras.gov.br/app');
+      new window.VLibras.Widget("https://vlibras.gov.br/app");
     </script>
     <header>
-      <img src="" alt="">
+      <img src="" alt="" />
     </header>
-    <div class= "conteiner">
-      <nav class= "navbar">
-        <a href="index.php">Home</a></br>
-        <a href="protectfeed.php">Feed</a></br>
-        <a href="postagem.php">Postar</a></br>
-        <a href="cadastraanimal.php">Cadastrar animal</a></br>
-        <a href="doacao.html">Doação</a></br>
-        <a href="dados.php">Dados do cadastro</a></br>
-        <a href="protectdadosanimais.php">Dados dos animais</a></br>
-        <a href="cadastroespecialista.php">Cadastro dos especialistas</a></br>
-        <button><a href="logout.php">Sair</a></button>
+    <div class="conteiner">
+      <nav class="navbar">
+        <?php include 'navbar.php'; ?>
       </nav>
-    </div><br><br>
+    </div>
+    <br /><br />
 
     <form method="POST" action="doacao.php">
       <label for="nome">Nome:</label>
@@ -48,6 +44,5 @@
 
       <button type="submit">Próximo</button>
     </form>
-
   </body>
 </html>

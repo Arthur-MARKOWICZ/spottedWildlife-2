@@ -41,6 +41,9 @@
   <script>
     new window.VLibras.Widget('https://vlibras.gov.br/app');
   </script>
+       <nav class= "navbar">
+      <?php include 'navbar.php'; ?>
+      </nav>
     <div>
         <form action="salvardadosanimal.php" method="POST">
             Nome Usual: <input type="text" name="txtNomeUsual" id="txtNomeUsual" value="<?php echo $nome ?>" placeholder="Insira o nome usual do animal"/><br/>

@@ -45,9 +45,8 @@
     new window.VLibras.Widget('https://vlibras.gov.br/app');
   </script>
     <div class="conteiner">
-      <nav>
-        <div class="navbar">
-        </div>
+    <nav class= "navbar">
+      <?php include 'navbar.php'; ?>
       </nav>
       
       <div class="conteiner">

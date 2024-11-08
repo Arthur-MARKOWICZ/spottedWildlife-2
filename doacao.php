@@ -16,7 +16,7 @@ class Doacao {
 
     function exibirInstrucoesPix() {
         echo "<p>Para concluir a doação, envie o valor para o seguinte código Pix:</p>";
-        echo "<p><strong>123.456.789-00</strong> (CNPJ da instituição)</p>";
+        echo "<p><strong></strong> +55 (41) 99156-2507(telefone)</p>";
         echo "<p>Após o pagamento, você receberá um e-mail de confirmação.</p>";
     }
 }
@@ -40,6 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Confirmação de Doação</title>
 </head>
 <body>
+    
     <div class="container">
         
         <form action="doacao_agradecimento.html" method="POST">

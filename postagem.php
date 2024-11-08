@@ -23,17 +23,8 @@
   </script>
     <section>
     <div class= "conteiner">
-      
-      <nav class= "navbar">
-        <a href="index.php">Home</a></br>
-        <a href="protectfeed.php">Feed</a></br>
-        <a href="postagem.php">Postar</a></br>
-        <a href="cadastraanimal.php">Cadastrar animal</a></br>
-        <a href="doacao.html">Doação</a></br>
-        <a href="dados.php">Dados do cadastro</a></br>
-        <a href="protectdadosanimais.php">Dados dos animais</a></br>
-        <a href="cadastroespecialista.php">Cadastro dos especialistas</a></br>
-        <button><a href="logout.php">Sair</a></button>
+    <nav class= "navbar">
+      <?php include 'navbar.php'; ?>
       </nav>
     </div>
     </section><br><br>
