@@ -2,6 +2,9 @@
   background-color: rgb(31, 158, 69);
   padding: 0px;
   text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   color: white;
 }
 
