@@ -73,6 +73,11 @@
             <p>Nenhum resultado encontrado para a ordem.</p>
         <?php endif; ?>
     </div>
+    <footer>
+      <br>
+      <p>OMC 2024 - Todos os direitos reservados</p>
+      
+    </footer>
 </body>
 <script>
     var search = document.getElementById('Pesquisar');

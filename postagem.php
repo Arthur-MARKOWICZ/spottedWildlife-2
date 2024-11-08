@@ -41,7 +41,11 @@
                 <input type = "submit" name="enviar" value="publicar"><br>
             </form>
     </div>
-   
+    <footer>
+      <br>
+      <p>OMC 2024 - Todos os direitos reservados</p>
+      
+    </footer>
 </body>
 <script>
         function verificarTamanhoArquivo() {

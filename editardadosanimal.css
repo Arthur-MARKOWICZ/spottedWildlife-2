@@ -8,7 +8,14 @@ h1 {
   font-size: 30px;
   text-align: center;
 }
-
+footer {
+  background-color: rgb(31, 158, 69);
+  height: 80px;
+  text-align: center;
+  justify-content: center;
+  margin: 0;
+  color: white;
+}
 header {
   background-color: rgb(31, 158, 69);
   height: 80px;

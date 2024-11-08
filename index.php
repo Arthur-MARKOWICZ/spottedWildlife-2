@@ -45,5 +45,10 @@
         O projeto não tem intuito financeiro e é não-governamental, o dinheiro arrecadado será usado para manter o site 
         no ar e o sobressalente será doado para outras instituições. 
     </div>
+    <footer>
+      <br>
+      <p>OMC 2024 - Todos os direitos reservados</p>
+      
+    </footer>
 </body>
 </html>

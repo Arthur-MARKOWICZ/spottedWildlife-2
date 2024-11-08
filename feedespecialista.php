@@ -88,6 +88,11 @@ if ($resultP->num_rows > 0) {
     echo "<p>Nenhuma postagem encontrada.</p>";
 }
 ?>
+<footer>
+      <br>
+      <p>OMC 2024 - Todos os direitos reservados</p>
+      
+    </footer>
 </body>
 <script>
     var search = document.getElementById('pesquisar');
