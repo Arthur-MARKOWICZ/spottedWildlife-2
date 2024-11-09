@@ -58,6 +58,7 @@ $resultP = $conn->query($sqlP)
 if ($resultP->num_rows > 0) {
     while ($postagem = $resultP->fetch_assoc()) {
         $id = $postagem['postagem_id'];
+        $like = $postagem['num_like'];
         $nome = htmlspecialchars($postagem['nome_user']); 
         $titulo = htmlspecialchars($postagem['titulo']);
         $cidade = htmlspecialchars($postagem['cidade']);
@@ -76,6 +77,11 @@ if ($resultP->num_rows > 0) {
         echo "<h4>$data</h4>";
         echo "<h4>$nome</h4>";
         echo"</div>"; 
+        echo "<td>
+        <form action='likepostagem.php' method='post'>
+            <button  class = 'botao'type='submit' name='postagem_id' value='".$postagem['postagem_id']."'>like: $like</button>
+        </form><br><br>
+      </td>";
     }
 } else {
     echo "<p>Nenhuma postagem encontrada.</p>";
