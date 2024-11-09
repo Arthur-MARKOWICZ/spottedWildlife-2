@@ -18,7 +18,7 @@
         $nome_user = $usuariodados['nome_user'];
         $cidade = $usuariodados['end_cidade'];
         $sexo = $usuariodados['sexo'];
-    
+
         
     }
 
@@ -114,10 +114,11 @@
         Telefone <input type="text" name="txtTel" id="txtTel" placeholder="Insira seu telefone (Apenas números)"value ="<?php echo "$telefone" ?> " /><br />
         Animal Favorito <input type="text" name="txtAF" id="txtAF" value ="<?php echo "$animalFav" ?> "/><br />
         Nome de usuário <input type="text" name="txtNU" id="txtNU" placeholder="Insira o nome que será exibido para os outros usuários" value ="<?php echo "$nome_user" ?> "/><br />
-        Senha <input type="text" name="txtSenha" id="txtSenha" placeholder="Insira sua senha" value="<?php echo $senha; ?>"
-        />
+        Senha: <input type="text" name="txtSenha" id="txtSenha" placeholder="Insira sua senha" value="<?php echo htmlspecialchars($senha); ?>" />
+
+
         <br />
-        Confirmar sua senha <input type="text" placeholder="Confirme sua senha" >
+        Confirmar sua senha <input type="text" id="confsenha" placeholder="Confirme sua senha" >
         <input type="submit" value="Enviar" />
         <input type="reset" value="Limpar" />
       </form>
@@ -126,6 +127,7 @@
 
   <script>
     const txtName = document.getElementById("txtName");
+    const confsenha = document.getElementById("confsenha");
     const txtCPF = document.getElementById("txtCPF");
     const dataNasc = document.getElementById("txtNasc");
     const cboGender = document.getElementById("optGender");
@@ -191,6 +193,11 @@
       if (txtSenha.value === "") {
         alert("Preenchimento obrigatório: Senha");
         txtSenha.focus();
+        return false;
+      }
+      if(txtSenha.value !== confsenha.value){
+        alert("confirmar senha e senha diferentes");
+        confsenha.focus();
         return false;
       }
       if (!isCPF(txtCPF)) {

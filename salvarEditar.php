@@ -14,7 +14,7 @@
         $cidade = $_POST['end_cidade'];
         $sexo = $_POST['optGender'];
         $senhaantes = $_POST['txtSenha'];
-    
+        $_SESSION['senha'] = $senhaantes;
         $senha = password_hash($senhaantes, PASSWORD_DEFAULT);
         $sqlupdate = "UPDATE usuarios SET nome='$nome' ,cpf= $cpf,email_pessoal = '$email',senha_user='$senha',data_nasc='$dataNasc',
         telefone='$telefone',end_pais ='$pais', end_cidade='$cidade',animal_fav='$animalFav',nome_user='$nome_user', sexo ='$sexo', end_estado = '$estado'
