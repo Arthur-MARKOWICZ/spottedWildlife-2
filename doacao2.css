@@ -56,21 +56,6 @@ button[type="submit"] {
   transition: background-color 0.3s;
 }
 
-button[type="submit"]:hover {
-  background-color: #0056b3;
-  color: #007bff;
-  font-size: 1.1rem;
-  text-align: center;
-}
-
-.conteiner {
-  display: flex;
-}
-footer {
-  background-color: rgb(31, 158, 69);
-  height: 80px;
-  text-align: center;
-  justify-content: center;
-  margin: 0;
-  color: white;
+.botao-concluir:hover {
+  background-color: #45a049;
 }
