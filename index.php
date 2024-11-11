@@ -7,8 +7,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index2.css" />
-    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="index5.css" />
+    <link rel="stylesheet" href="navbar2.css" />
     
     <title>home</title>
 </head>
@@ -23,10 +23,11 @@
   <script>
     new window.VLibras.Widget('https://vlibras.gov.br/app');
   </script>
-<header>
-      <img src="" alt="" />
-    </header>
-    
+<header class = 'imagem'>
+
+    <img src="logo.png" alt="logo"/>
+
+</header>
     <div class= "conteiner">
       
       <nav class= "navbar">

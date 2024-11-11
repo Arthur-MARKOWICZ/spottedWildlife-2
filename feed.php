@@ -25,7 +25,7 @@ $resultP = $conn->query($sqlP)
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="feed5.css" />
-    <link rel="stylesheet" href="navbar.css"/>
+    <link rel="stylesheet" href="navbar2.css"/>
     <title>Document</title>
 </head>
 <body>

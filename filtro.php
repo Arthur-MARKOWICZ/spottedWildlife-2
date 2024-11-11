@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="filtro3.css" />
-    <link rel="stylesheet" href="navbar.css"/>
+    <link rel="stylesheet" href="navbar2.css"/>
     <title>Filtros para Geração de Relatório</title>
 </head>
 <body>

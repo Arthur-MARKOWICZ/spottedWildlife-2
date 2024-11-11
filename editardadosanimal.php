@@ -29,7 +29,7 @@
     
     <title>Document</title>
     <link rel="stylesheet" href="editardadosanimal2.css"/>
-    <link rel="stylesheet" href="navbar.css"/>
+    <link rel="stylesheet" href="navbar2.css"/>
 </head>
 <body>
 <div vw class="enabled">

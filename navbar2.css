@@ -4,6 +4,7 @@ body {
 .navbar {
   background-color: rgb(31, 158, 69);
   padding: 0px;
+  width: 100vw;
   text-align: center;
   display: flex;
   flex-direction: row;

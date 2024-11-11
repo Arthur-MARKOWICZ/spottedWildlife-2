@@ -13,7 +13,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="dados.css" />
-    <link rel="stylesheet" href="navbar.css"/>
+    <link rel="stylesheet" href="navbar2.css"/>
     <title>Atualizando dados do cadastro</title>
 </head>
 <body>
