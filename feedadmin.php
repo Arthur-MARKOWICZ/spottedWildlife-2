@@ -26,7 +26,7 @@ $resultP = $conn->query($sqlP)
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="feed5.css" />
+    <link rel="stylesheet" href="feed7.css" />
     <link rel="stylesheet" href="navbar2.css"/>
     <title>Document</title>
 </head>
@@ -86,15 +86,17 @@ if ($resultP->num_rows > 0) {
         echo "<h4>$data</h4>";
         echo "<h4>$nome</h4>";
         if($resultLIKE->num_rows == 0){
+            //adiciona like
             echo "<td>
                 <form action='likepostagem.php' method='post'>
-                    <button  class = 'botao'type='submit' name='postagem_id' value='".$postagem['postagem_id']."'><img src='like.png' alt='logo'/> $like</button>
+                    <button  class = 'botao'type='submit' name='postagem_id' value='".$postagem['postagem_id']."'><img src='like.png' alt='logo' width='20%' height='20%'/> $like</button>
                 </form><br><br>
             </td>";
         }else{
+            //tira o like
             echo"<td>
                 <form action='dislikepostagem.php' method='post'>
-                    <button  class = 'like' type='submit' name='postagem_id' value='".$postagem['postagem_id']."'><img src='like.png' alt='logo'/> $like</button>
+                    <button  class = 'like' type='submit' name='postagem_id' value='".$postagem['postagem_id']."'><img src='like.png' alt='logo'  width='20%' height='20%'/> $like</button>
                 </form><br><br>
             </td>";
        }

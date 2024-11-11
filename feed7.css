@@ -87,6 +87,7 @@ footer {
 }
 
 .like {
+  height: 30%;
   width: 14%;
   padding: 10px;
   background-color: #007bff;
