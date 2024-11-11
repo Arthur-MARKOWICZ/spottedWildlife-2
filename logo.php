@@ -8,11 +8,12 @@
   min-width: 100vw;
   width: 100%;
   padding-top: 30px;
+  
 }
 
 img {
-  width: 700px;
-  height: 270px;
+  width: 950px;
+  height: 370px;
   max-height: 400%;
   max-width: 150%;
 }
