@@ -12,6 +12,7 @@ h1 {
 header {
   background-color: rgb(31, 158, 69);
   height: 80px;
+  width: 100%;
 }
 
 select {
@@ -45,15 +46,4 @@ button:focus {
 }
 .conteiner {
   display: flex;
-}
-
-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: rgb(31, 158, 69); /* Cor de fundo do rodapé */
-  color: white;
-  text-align: center;
-  padding: 10px 0;
-  z-index: 10;
 }

@@ -3,17 +3,16 @@
     include('protect.php');
     $id = $_SESSION['id'];
     $postagem_id = $_POST['postagem_id'];
-    $sql = "SELECT * from like_postagem WHERE usuario_id = $id AND postagem_id = $postagem_id";
-    $result = $conn->query($sql);
-    if($result->num_rows == 0 ){
 
-    $stmt = $conn->prepare("INSERT INTO like_postagem(usuario_id,postagem_id)values (?,?)");
-    $stmt->bind_param('ii',$id,$postagem_id);
-    $stmt->execute();
-    $stmt2 = $conn->prepare("UPDATE postagem SET num_like = num_like + 1 WHERE postagem_id = ?");
+
+    $sqldelete = "DELETE FROM like_postagem WHERE postagem_id = $postagem_id AND usuario_id = $id";
+    $resultdelete = $conn->query($sqldelete);
+    
+    $stmt2 = $conn->prepare("UPDATE postagem SET num_like = num_like - 1 WHERE postagem_id = ?");
     $stmt2->bind_param("i", $postagem_id); 
     $stmt2->execute();
-    }
+    
+ 
 
     $sqlE = "SELECT especialista_id from especialistas WHERE usuarios_id = '$id'";  
     $resultE = $conn->query($sqlE);

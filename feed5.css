@@ -1,6 +1,7 @@
 .conteiner {
   display: flex;
 }
+
 footer {
   background-color: rgb(31, 158, 69);
   height: 80px;
@@ -9,6 +10,7 @@ footer {
   margin: 0;
   color: white;
 }
+
 .feed-container {
   display: flex;
   flex-direction: column;
@@ -82,4 +84,23 @@ footer {
   display: flex;
   justify-content: center;
   gap: 0.1%;
+}
+
+.like {
+  width: 14%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.botao {
+  width: 14%;
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
 }

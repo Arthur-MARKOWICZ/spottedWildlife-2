@@ -26,7 +26,7 @@ $resultP = $conn->query($sqlP)
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="feed4.css" />
+    <link rel="stylesheet" href="feed5.css" />
     <link rel="stylesheet" href="navbar.css"/>
     <title>Document</title>
 </head>
@@ -57,16 +57,16 @@ $resultP = $conn->query($sqlP)
 
 
 <?php
-$sql = "SELECT *
-        FROM postagem p
-        JOIN usuarios u ON p.usuarios_id = u.usuarios_id
-        ORDER BY p.postagem_id DESC";
 
-$result = $conn->query($sql);
+
+
 
 if ($resultP->num_rows > 0) {
     while ($postagem = $resultP->fetch_assoc()) {
-        $id = $postagem['postagem_id'];
+        $id_postagem = $postagem['postagem_id'];
+        $id = $_SESSION['id'];
+        $sqlLIKE = "SELECT * from like_postagem WHERE usuario_id = $id AND postagem_id = $id_postagem";
+        $resultLIKE = $conn->query($sqlLIKE);
         $like = $postagem['num_like'];
         $nome = htmlspecialchars($postagem['nome_user']); 
         $titulo = htmlspecialchars($postagem['titulo']);
@@ -79,17 +79,25 @@ if ($resultP->num_rows > 0) {
         if($postagem['verificada'] != 0){
           echo "postagem verificada <br><br>";
         }
-        echo "<img src='imagem.php?id=$id' alt='Imagem da postagem' width='40%' height='40%'>";
+        echo "<img src='imagem.php?id=$id_postagem' alt='Imagem da postagem' width='40%' height='40%'>";
         echo "<h4>$comentario</h4>";
         echo "<h4>$animal</h4>";
         echo "<h4>$cidade</h4>";
         echo "<h4>$data</h4>";
         echo "<h4>$nome</h4>";
-        echo "<td>
-        <form action='likepostagem.php' method='post'>
-            <button  class = 'botao'type='submit' name='postagem_id' value='".$postagem['postagem_id']."'>like: $like</button>
-        </form><br><br>
-      </td>";
+        if($resultLIKE->num_rows == 0){
+            echo "<td>
+                <form action='likepostagem.php' method='post'>
+                    <button  class = 'botao'type='submit' name='postagem_id' value='".$postagem['postagem_id']."'>like: $like</button>
+                </form><br><br>
+            </td>";
+        }else{
+            echo"<td>
+                <form action='dislikepostagem.php' method='post'>
+                    <button  class = 'like' type='submit' name='postagem_id' value='".$postagem['postagem_id']."'>like: $like</button>
+                </form><br><br>
+            </td>";
+       }
         echo "<td>
                     <form action='verificarpostagem.php' method='post'>
                         <button  class = 'botao'type='submit' name='postagem_id' value='".$postagem['postagem_id']."'>Verificar</button>
