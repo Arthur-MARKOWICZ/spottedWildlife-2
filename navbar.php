@@ -11,7 +11,6 @@ $usuarios_id = $_SESSION['id'];
     $especialista_id = $resultE && $resultE->num_rows > 0 ? mysqli_fetch_assoc($resultE)['especialista_id'] : null;
 
 ?>
-
 <div>
     <nav class = "navbar">
 

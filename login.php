@@ -43,7 +43,7 @@ if(isset($_POST['email'])||isset($_POST['senha'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login2.css" />
+    <link rel="stylesheet" href="login3.css" />
     <title>login</title>
 </head>
 
@@ -58,8 +58,8 @@ if(isset($_POST['email'])||isset($_POST['senha'])){
   <script>
     new window.VLibras.Widget('https://vlibras.gov.br/app');
   </script>
-
-<div class="box">
+<?php include 'logo.php'; ?><br>
+<div class = 'loginBox'>
         <h1>Acesse sua conta</h1>
         <form action="" method="POST">
             <p>
@@ -73,7 +73,7 @@ if(isset($_POST['email'])||isset($_POST['senha'])){
             <p>
                 <button type="submite">Entrar</button>
             </p>
-            <button><a href="cadastro.html" class="botao">Cadastrar-se</a></button>
+            <button><a href="cadastro1.php" class="botao">Cadastrar-se</a></button>
         </form>
 </div>
 </body>

@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Confirmação de Doação</title>
 </head>
 <body>
-    
+<?php include 'logo.php'; ?>
     <div class="container">
         
         <form action="doacao_agradecimento.html" method="POST">

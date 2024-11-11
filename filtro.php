@@ -11,6 +11,7 @@
     <title>Filtros para Geração de Relatório</title>
 </head>
 <body>
+<?php include 'logo.php'; ?>
 <nav class= "navbar">
       <?php include 'navbar.php'; ?>
 </nav>

@@ -40,7 +40,7 @@ $resultP = $conn->query($sqlP)
   <script>
     new window.VLibras.Widget('https://vlibras.gov.br/app');
   </script>
-
+         <?php include 'logo.php'; ?>
     <div class= "conteiner">
       
     <nav class= "navbar">

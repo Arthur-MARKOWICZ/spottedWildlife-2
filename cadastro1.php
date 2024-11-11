@@ -17,11 +17,9 @@
   <script>
     new window.VLibras.Widget('https://vlibras.gov.br/app');
   </script>
+  <?php include 'logo.php'; ?>
+  <br><br><br>
 
-  <br>
-    <header>
-      <img src="" alt="" />
-    </header>
     <h1>Cadastro</h1>
     <div class="conteiner">
 
