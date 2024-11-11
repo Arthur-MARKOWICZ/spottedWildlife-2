@@ -36,7 +36,8 @@ $usuarios_id = $_SESSION['id'];
             <?php endif; ?>
 
 
-           <a href="logout.php">Sair</a>
+            <a href="logout.php" >Sair</a>
+
 
         <?php endif; ?>
     </ul>

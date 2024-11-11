@@ -7,12 +7,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index5.css" />
+    <link rel="stylesheet" href="index6.css" />
     <link rel="stylesheet" href="navbar2.css" />
     
     <title>home</title>
 </head>
 <body>
+<header class = 'imagem'>
+      <img src="logo.png" alt="logo"/>
+</header>
     <div vw class="enabled">
     <div vw-access-button class="active"></div>
     <div vw-plugin-wrapper>
@@ -23,11 +26,8 @@
   <script>
     new window.VLibras.Widget('https://vlibras.gov.br/app');
   </script>
-<header class = 'imagem'>
+  
 
-    <img src="logo.png" alt="logo"/>
-
-</header>
     <div class= "conteiner">
       
       <nav class= "navbar">

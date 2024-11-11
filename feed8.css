@@ -2,15 +2,6 @@
   display: flex;
 }
 
-footer {
-  background-color: rgb(31, 158, 69);
-  height: 80px;
-  text-align: center;
-  justify-content: center;
-  margin: 0;
-  color: white;
-}
-
 .feed-container {
   display: flex;
   flex-direction: column;
@@ -61,7 +52,7 @@ footer {
 }
 
 .feed .data {
-  font-style: italic;
+  font-style: normal;
   color: #888;
   font-size: 14px;
   margin-top: 10px;
@@ -104,4 +95,9 @@ footer {
   border: none;
   border-radius: 8px;
   cursor: pointer;
+}
+h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="animalcadastro2.css"/>
+    <link rel="stylesheet" href="animalcadastro3.css"/>
     <link rel="stylesheet" href="navbar2.css"/>
 </head>
 <body>
@@ -26,7 +26,8 @@
       <?php include 'navbar.php'; ?>
       </nav>
       </nav>
-    </div>
+    </div><br>
+    <h2>cadastro de animais</h2><br>
 <div class= "x">
       
 

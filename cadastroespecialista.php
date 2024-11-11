@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="CADASTROESP.css"/>
+    <link rel="stylesheet" href="CADASTROESP2.css"/>
     <link rel="stylesheet" href="navbar2.css"/>
 </head>
 
@@ -29,7 +29,9 @@
       <?php include 'navbar.php'; ?>
       </nav>
       
-    </div>
+    </div><br><br>
+    <H2> CADASTRO ESPEICALISTA</H2>
+      <h2>Faça aqui a petição para fazer parte da nossa comunidade de especialista</h2>
     <form action="salvarCadEsp.php" method="POST" enctype="multipart/form-data"  onsubmit="return verificarTamanhoArquivo();">
 
       Graduação <input type="text" name="txtgraduacao" id="graduacao" placeholder="Insira aqui no que você é formado">

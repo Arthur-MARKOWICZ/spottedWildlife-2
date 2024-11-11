@@ -46,6 +46,7 @@ $resultP = $conn->query($sqlP)
       <?php include 'navbar.php'; ?>
       </nav>
     </div><br><br>
+    <h2>Feed</h2>
     <div class="box-search">
         <input type="search" class="form-control w-25" placeholder="Pesquisar" id="pesquisar">
         <button onclick="searchData()" class="btn btn-primary">
