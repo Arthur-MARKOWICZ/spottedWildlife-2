@@ -22,7 +22,7 @@ mysqli_query($conn, "SET autocommit = FALSE");
 
 mysqli_query($conn, "START TRANSACTION");
 
-mysqli_query($conn, "SAVEPOINT antes_do_update");
+mysqli_query($conn, "SAVEPOINT dados_antigos");
 
 $sqlupdate = "
     UPDATE usuarios 
@@ -47,8 +47,8 @@ if (mysqli_query($conn, $sqlupdate)) {
     
     mysqli_query($conn, "COMMIT");
     
-    while ($row = mysqli_fetch_assoc($result)) {
-        print_r($row);
+    while ($linha = mysqli_fetch_assoc($result)) {
+        print_r($linha);
     }
 } else {
 
