@@ -52,7 +52,7 @@ if (mysqli_query($conn, $sqlupdate)) {
     }
 } else {
 
-    mysqli_query($conn, "ROLLBACK TO SAVEPOINT antes_do_update");
+    mysqli_query($conn, "ROLLBACK TO SAVEPOINT dados_antigos");
 }
 
 mysqli_query($conn, "SET autocommit = TRUE");
