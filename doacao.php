@@ -1,4 +1,5 @@
 <?php
+include('conn.php');
 class Doacao {
     public $nome;
     public $valor;
@@ -26,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $valor = $_POST["valor"];
     $metodo = $_POST["metodo"];
 
-    $stmt = $conn->prepare( "INSERT into docao(valor,nome) values(?,?)");
+    $stmt = $conn->prepare( "INSERT into doacao(valor,nome) values(?,?)");
     $stmt->bind_param("ss",$valor,$nome);
     $stmt->execute();
     $doacao = new Doacao();
