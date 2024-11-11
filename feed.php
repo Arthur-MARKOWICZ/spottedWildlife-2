@@ -24,7 +24,7 @@ $resultP = $conn->query($sqlP)
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="feed7.css" />
+    <link rel="stylesheet" href="feed8.css" />
     <link rel="stylesheet" href="navbar2.css"/>
     <title>Document</title>
 </head>
@@ -46,7 +46,7 @@ $resultP = $conn->query($sqlP)
       <?php include 'navbar.php'; ?>
       </nav>
     </div><br><br>
-   
+    <h2>Feed</h2>
     <div class="box-search">
         <input type="search" class="form-control w-25" placeholder="Pesquisar" id="pesquisar">
         <button onclick="searchData()" class="btn btn-primary">
