@@ -21,9 +21,7 @@ include('protect.php');
     <script>
       new window.VLibras.Widget("https://vlibras.gov.br/app");
     </script>
-    <header>
-      <img src="" alt="" />
-    </header>
+
     <div class="conteiner">
       <nav class="navbar">
         <?php include 'navbar.php'; ?>

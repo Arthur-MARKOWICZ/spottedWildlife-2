@@ -39,7 +39,6 @@ $resultP = $conn->query($sqlP)
   <script>
     new window.VLibras.Widget('https://vlibras.gov.br/app');
   </script>
-
     <div class= "conteiner">
       
     <nav class= "navbar">

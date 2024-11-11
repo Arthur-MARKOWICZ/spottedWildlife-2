@@ -12,33 +12,36 @@ $usuarios_id = $_SESSION['id'];
 
 ?>
 
-<nav class = "navbar">
-    <ul>
-        <?php if (isset($_SESSION['id'])): ?>
-            <a href="index.php">Home</a>|
-            <a href="protectfeed.php">Feed</a>|
-            <a href="protectdadosanimais.php">Dados dos animais</a>|
-            <a href="postagem.php">Postagem</a>|
-            <a href="dados.php">Dados do cadastro</a>|
-            <a href="cadastroespecialista.php">Cadastro de especialistas</a>|
-            <a href="doacao1.php">Doação</a>|
+<div>
+    <nav class = "navbar">
+
+        <ul>
+            <?php if (isset($_SESSION['id'])): ?>
+                <a href="index.php">Home</a>|
+                <a href="protectfeed.php">Feed</a>|
+                <a href="protectdadosanimais.php">Dados dos animais</a>|
+                <a href="postagem.php">Postagem</a>|
+                <a href="dados.php">Dados do cadastro</a>|
+                <a href="cadastroespecialista.php">Cadastro de especialistas</a>|
+                <a href="doacao1.php">Doação</a>|
 
 
-            <?php if ($especialista_id || $admin_id): ?>
-                <a href="cadastraanimal.php">Cadastro de Animais</a>|
-        <?php endif; ?>
-
-                <?php if ($admin_id): ?>
-                <a href="dadosUsuarios.php">Dados de usuarios</a>|
-               <a href="verificarespecialista.php">Aceitar especialista</a>|
-               <a href="filtro.php">Gerar relatorio</a>|
-
+                <?php if ($especialista_id || $admin_id): ?>
+                    <a href="cadastraanimal.php">Cadastro de Animais</a>|
             <?php endif; ?>
 
+                    <?php if ($admin_id): ?>
+                    <a href="dadosUsuarios.php">Dados de usuarios</a>|
+                <a href="verificarespecialista.php">Aceitar especialista</a>|
+                <a href="filtro.php">Gerar relatorio</a>|
 
-            <a href="logout.php" >Sair</a>
+                <?php endif; ?>
 
 
-        <?php endif; ?>
-    </ul>
-</nav>
+                <a href="logout.php" >Sair</a>
+
+
+            <?php endif; ?>
+        </ul>
+    </nav>
+</div>

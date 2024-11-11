@@ -40,12 +40,14 @@ $resultP = $conn->query($sqlP)
   <script>
     new window.VLibras.Widget('https://vlibras.gov.br/app');
   </script>
+
     <div class= "conteiner">
       
     <nav class= "navbar">
       <?php include 'navbar.php'; ?>
       </nav>
     </div><br><br>
+    
     <h2>Feed</h2>
     <div class="box-search">
         <input type="search" class="form-control w-25" placeholder="Pesquisar" id="pesquisar">

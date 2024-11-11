@@ -13,9 +13,7 @@
     <title>home</title>
 </head>
 <body>
-<header class = 'imagem'>
-      <img src="logo.png" alt="logo"/>
-</header>
+
     <div vw class="enabled">
     <div vw-access-button class="active"></div>
     <div vw-plugin-wrapper>

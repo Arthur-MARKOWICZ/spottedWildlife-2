@@ -24,10 +24,21 @@ if($quantidade['verificada'] != 1){
         $resultI = $conn->query($sqlIncrement);
         header('location: feedespecialista.php');
 }
-else{
-        echo "Postagem já verificada <br>";
-        echo "<a class='botao' href='feedespecialista.php'>Voltar por feed</a>";
-}
 ?>
-
-
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="doacao_agradecimento.css" />
+    <title>Verificar postagem</title>
+  </head>
+  <body>
+    <div class="container">
+        <h1>Postagem ja foi verificada<h1><br>
+      <button onclick="location.href='index.php'">
+        Voltar para a Página Inicial
+      </button>
+    </div>
+  </body>
+</html>
