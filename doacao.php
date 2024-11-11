@@ -26,6 +26,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $valor = $_POST["valor"];
     $metodo = $_POST["metodo"];
 
+    $stmt = $conn->prepare( "INSERT into docao(valor,nome) values(?,?)");
+    $stmt->bind_param("ss",$valor,$nome);
+    $stmt->execute();
     $doacao = new Doacao();
     $doacao->realizarDoacao($nome, $valor, $metodo);
 
@@ -36,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="doacao_2.css" />
+    <link rel="stylesheet" href="doacao3.css" />
     <title>Confirmação de Doação</title>
 </head>
 <body>
