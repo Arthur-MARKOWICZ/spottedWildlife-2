@@ -16,9 +16,46 @@
         $senhaantes = $_POST['txtSenha'];
         $_SESSION['senha'] = $senhaantes;
         $senha = password_hash($senhaantes, PASSWORD_DEFAULT);
-        $sqlupdate = "UPDATE usuarios SET nome='$nome' ,cpf= $cpf,email_pessoal = '$email',senha_user='$senha',data_nasc='$dataNasc',
-        telefone='$telefone',end_pais ='$pais', end_cidade='$cidade',animal_fav='$animalFav',nome_user='$nome_user', sexo ='$sexo', end_estado = '$estado'
-        WHERE usuarios_id ='$id' ";
+
+       
+mysqli_query($conn, "SET autocommit = FALSE");
+
+mysqli_query($conn, "START TRANSACTION");
+
+mysqli_query($conn, "SAVEPOINT antes_do_update");
+
+$sqlupdate = "
+    UPDATE usuarios 
+    SET nome = '$nome', 
+        cpf = '$cpf', 
+        email_pessoal = '$email', 
+        senha_user = '$senha', 
+        data_nasc = '$dataNasc', 
+        telefone = '$telefone', 
+        end_pais = '$pais', 
+        end_cidade = '$cidade', 
+        animal_fav = '$animalFav', 
+        nome_user = '$nome_user', 
+        sexo = '$sexo', 
+        end_estado = '$estado'
+    WHERE usuarios_id = '$id';
+";
+
+if (mysqli_query($conn, $sqlupdate)) {
+    
+    $result = mysqli_query($conn, "SELECT * FROM usuarios WHERE usuarios_id = '$id'");
+    
+    mysqli_query($conn, "COMMIT");
+    
+    while ($row = mysqli_fetch_assoc($result)) {
+        print_r($row);
+    }
+} else {
+
+    mysqli_query($conn, "ROLLBACK TO SAVEPOINT antes_do_update");
+}
+
+mysqli_query($conn, "SET autocommit = TRUE");
         $result = $conn->query($sqlupdate);
         header('location: dados.php');
 

@@ -219,7 +219,7 @@
       return true;
     }
     function isCPF(txtcpf) {
-        const cpf = txtcpf.value;
+        const cpf = txtcpf.value.trim();
         const re = /^\d{11}$/;
         return re.test(cpf)
       

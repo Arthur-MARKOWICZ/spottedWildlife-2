@@ -36,8 +36,7 @@ if ($quantidade != 0){
   echo "<a href = 'cadastro.html'>voltar para o cadastro</a>";
 }else{
   
-$cadastro_sql = "INSERT INTO usuarios (nome, cpf, animal_fav, senha_user, nome_user, end_pais, 
-    end_cidade, telefone, email_pessoal, data_nasc, sexo, end_estado) 
+$cadastro_sql = "INSERT INTO usuarios (nome, cpf, animal_fav, senha_user, nome_user, end_pais, end_cidade, telefone, email_pessoal, data_nasc, sexo, end_estado) 
     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
 
