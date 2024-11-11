@@ -24,7 +24,7 @@ $resultP = $conn->query($sqlP)
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="feed3.css" />
+    <link rel="stylesheet" href="feed4.css" />
     <link rel="stylesheet" href="navbar.css"/>
     <title>Document</title>
 </head>
@@ -76,12 +76,13 @@ if ($resultP->num_rows > 0) {
         echo "<h4>$cidade</h4>";
         echo "<h4>$data</h4>";
         echo "<h4>$nome</h4>";
-        echo"</div>"; 
+
         echo "<td>
         <form action='likepostagem.php' method='post'>
             <button  class = 'botao'type='submit' name='postagem_id' value='".$postagem['postagem_id']."'>like: $like</button>
         </form><br><br>
       </td>";
+      echo"</div>"; 
     }
 } else {
     echo "<p>Nenhuma postagem encontrada.</p>";

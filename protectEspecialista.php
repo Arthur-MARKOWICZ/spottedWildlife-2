@@ -11,7 +11,7 @@ include('conn.php');
     $resultE = $conn->query($sqlE);
     $quantidade = $result->num_rows;
     $quantidadeE = $resultE->num_rows;
-    if($quantidade !=1 or $quantidadeE != 1){
+    if($quantidade !=1 && $quantidadeE != 1){
         header('location: login.php');
     }
 ?>
