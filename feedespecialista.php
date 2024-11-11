@@ -85,13 +85,13 @@ if ($resultP->num_rows > 0) {
         if($resultLIKE->num_rows == 0){
             echo "<td>
                 <form action='likepostagem.php' method='post'>
-                    <button  class = 'botao'type='submit' name='postagem_id' value='".$postagem['postagem_id']."'>like: $like</button>
+                    <button  class = 'botao'type='submit' name='postagem_id' value='".$postagem['postagem_id']."'><img src='like.png' alt='logo'/>$like</button>
                 </form><br><br>
             </td>";
         }else{
             echo"<td>
                 <form action='dislikepostagem.php' method='post'>
-                    <button  class = 'like' type='submit' name='postagem_id' value='".$postagem['postagem_id']."'>like: $like</button>
+                    <button  class = 'like' type='submit' name='postagem_id' value='".$postagem['postagem_id']."'><img src='like.png' alt='logo'/>$like</button>
                 </form><br><br>
             </td>";
        }
