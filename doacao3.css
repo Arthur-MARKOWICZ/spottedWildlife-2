@@ -2,60 +2,45 @@ body {
   font-family: Arial, sans-serif;
   background-image: linear-gradient(45deg, cyan, limegreen);
   color: #333;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   height: 100vh;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-form {
-  background-color: #fff;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
-  width: 100%;
-}
-
-h1 {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-  color: #333;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-}
-
-label {
-  display: block;
-  font-size: 0.9rem;
-  margin-top: 1rem;
-  color: #666;
-}
-
-select {
-  width: 100%;
-  padding: 0.5rem;
-  margin-top: 0.25rem;
+  padding: 20px;
   border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
-  box-sizing: border-box;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 90%;
+  background-color: #f9f9f9;
 }
 
-button[type="submit"] {
-  width: 100%;
-  padding: 0.75rem;
-  margin-top: 1.5rem;
+.botao-concluir {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #4caf50;
+  color: white;
   border: none;
-  background-color: #007bff;
-  color: #fff;
-  font-size: 1rem;
-  font-weight: bold;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
 .botao-concluir:hover {
   background-color: #45a049;
+}
+
+.pix-instrucoes p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
 }

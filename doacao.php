@@ -11,14 +11,14 @@ class Doacao {
         $this->metodo = htmlspecialchars($metodo);
 
         if ($this->metodo === 'Pix') {
+            echo '<div class="pix-instrucoes">';
             $this->exibirInstrucoesPix();
+            echo '</div>';
         }
     }
 
     function exibirInstrucoesPix() {
-        echo "<p>Para concluir a doação, envie o valor para o seguinte código Pix:</p>";
-        echo "<p><strong></strong> +55 (41) 99156-2507(telefone)</p>";
-        echo "<p>Após o pagamento, você receberá um e-mail de confirmação.</p>";
+
     }
 }
 
@@ -27,12 +27,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $valor = $_POST["valor"];
     $metodo = $_POST["metodo"];
 
-    $stmt = $conn->prepare( "INSERT into doacao(valor,nome) values(?,?)");
-    $stmt->bind_param("ss",$valor,$nome);
+    $stmt = $conn->prepare("INSERT into doacao(valor,nome) values(?,?)");
+    $stmt->bind_param("ss", $valor, $nome);
     $stmt->execute();
+
     $doacao = new Doacao();
     $doacao->realizarDoacao($nome, $valor, $metodo);
-
 }
 ?>
 <!DOCTYPE html>
@@ -40,12 +40,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="doacao3.css" />
     <title>Confirmação de Doação</title>
+    <link rel="stylesheet" href="doacao3.css">
 </head>
 <body>
-<?php include 'logo.php'; ?>
     <div class="container">
+        <?php
+        $doacao = new Doacao();
+        echo "<p>Para concluir a doação, envie o valor para o seguinte código Pix:</p>";
+        echo "<p><strong>+55 (41) 99156-2507</strong> (telefone)</p>";
+        echo "<p>Após o pagamento, você receberá um e-mail de confirmação.</p>";
+        ?>
         
         <form action="doacao_agradecimento.html" method="POST">
             <button type="submit" class="botao-concluir">Concluir Doação</button>
