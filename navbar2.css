@@ -12,6 +12,7 @@ body {
   flex-direction: row;
   justify-content: space-around;
   color: white;
+  padding-right: 20px;
 }
 
 .navbar a {

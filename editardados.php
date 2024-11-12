@@ -33,9 +33,7 @@
     <title>editar dados do cadastro</title>
   </head>
   <br>
-    <header>
-      <img src="" alt="" />
-    </header>
+  <?php include 'logo.php'; ?><br><br>
     <nav class= "navbar">
           <?php include 'navbar.php'; ?>
       </nav>
@@ -50,7 +48,7 @@
   <script>
     new window.VLibras.Widget('https://vlibras.gov.br/app');
   </script>
-         <?php include 'logo.php'; ?>
+   
       
 
 
