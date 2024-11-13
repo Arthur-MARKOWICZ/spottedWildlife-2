@@ -1,5 +1,5 @@
 <?php
-   include("protect.php");
+   include('protect.php');
 
 ?>
 <!DOCTYPE html>
@@ -38,6 +38,7 @@
         <h2>Bem vindo ao home <?php echo $_SESSION['name']; ?></h2>
     </p><br><br>
     </div>
+    <h3>Nossos objetivos</h3>
     <div>
         “Spotted:Wildlife” é um projeto que tem o objetivo de ajudar na preservação de espécies de animais, 
         catalogação de onde estes animais (ameaçados de extinção) estão pelo mundo, e como eles se comportam na natureza.
