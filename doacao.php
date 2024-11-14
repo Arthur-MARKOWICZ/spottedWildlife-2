@@ -46,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <div class="container">
         <?php
-        $doacao = new Doacao();
+
         echo "<p>Para concluir a doação, envie o valor para o seguinte código Pix:</p>";
         echo "<p><strong>+55 (41) 99156-2507</strong> (telefone)</p>";
         echo "<p>Após o pagamento, você receberá um e-mail de confirmação.</p>";
