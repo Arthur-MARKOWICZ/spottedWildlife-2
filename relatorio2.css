@@ -17,13 +17,7 @@ h1 {
   margin: 20px 0;
 }
 
-.navbar {
-  width: 100%;
-  background-color: rgb(12, 66, 7);
-  color: white;
-  padding: 15px;
-  text-align: center;
-}
+
 
 .container {
   display: flex;
