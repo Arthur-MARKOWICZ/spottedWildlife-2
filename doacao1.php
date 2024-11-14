@@ -28,6 +28,7 @@ include('protect.php');
       </nav>
     </div>
     <br /><br />
+            O projeto não tem intuito financeiro e é não-governamental, ademais existe um custo de R$50,00 mensais para se manter ativo, todo o dinheiro arrecadado no mês será primeiramente e exclusivamente utilizado para ajudar a arcar com os custos, caso os valores arrecadados excedam os custos, uma parte será guardada para os custos do mês seguinte, e todo o restante será redirecionado à ONGs selecionadas de preservação de animais.
 
     <form method="POST" action="doacao.php">
       <label for="nome">Nome:</label>
