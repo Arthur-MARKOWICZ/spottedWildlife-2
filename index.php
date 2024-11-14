@@ -40,10 +40,10 @@
     </div>
     <h3>Nossos objetivos</h3>
     <div>
-        “Spotted:Wildlife” é um projeto que tem o objetivo de ajudar na preservação de espécies de animais, 
-        catalogação de onde estes animais (ameaçados de extinção) estão pelo mundo, e como eles se comportam na natureza.
-        O projeto não tem intuito financeiro e é não-governamental, o dinheiro arrecadado será usado para manter o site 
-        no ar e o sobressalente será doado para outras instituições. 
+        “Spotted:Wildlife” é um projeto em que o objetivo é criar uma comunidade que possa compartilhar registro de animais em extinção por todo o país, visando a preservação dessas espécies, facilitando o trabalho de especialistas ao indicar onde indivíduos de determinadas espécies estão ou não sendo encontradas, e também fiscalizar ambientes para ocasionalmente analisar uma movimentação anormal de espécies em locais não habituais.
+         <br>
+          <h3> Sobre nós </h3>
+         O projeto teve a iniciativa do grupo “OMC” formado por estudantes universitários, motivados por uma proposta de atividade acadêmica sobre preservação ambiental. 
     </div>
 </body>
 </html>
